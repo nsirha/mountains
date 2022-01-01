@@ -1,7 +1,10 @@
 <template>
-  <div class="card">
-    <img :src="image" :alt="title" width="150" height="150" />
-    <h3>{{ title }}</h3>
+  <div class="card shadow-xl">
+    <img :src="image" :alt="title" width="250" height="125" loading="lazy" />
+    <div class="card-content bg-white p-2.5">
+      <h3 class="title">{{ title }}</h3>
+      <p class="continent text-gray-400 text-xs">{{ continent }}</p>
+    </div>
   </div>
 </template>
 
@@ -9,6 +12,10 @@
 export default {
   props: {
     title: {
+      type: String,
+      default: null
+    },
+    continent: {
       type: String,
       default: null
     },
@@ -22,6 +29,22 @@ export default {
 
 <style scoped>
 .card {
-  border: 1px solid black;
+  width: 250px;
+  border-bottom-left-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
+}
+
+.card-content {
+  border-bottom-left-radius: var(--borderRadius);
+  border-bottom-right-radius: var(--borderRadius);
+}
+
+img {
+  background-color: crimson;
+  width: 250px;
+  height: 125px;
+  object-fit: cover;
+  border-top-left-radius: var(--borderRadius);
+  border-top-right-radius: var(--borderRadius);
 }
 </style>

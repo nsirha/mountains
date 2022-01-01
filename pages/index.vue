@@ -2,25 +2,15 @@
   <div>
     <Header />
     <main>
-      <Card
-        v-for="mountain in mountains"
-        :key="mountain.slug"
-        :title="mountain.title"
-        :image="mountain.image"
-      />
-
-      <ul>
-        <li>✅ Get mountains api data from api.nuxt.dev - https://api.nuxtjs.dev/mountains</li>
-        <li>✅ Create Card component</li>
-        <li>✅ Loop cards</li>
-        <li>Setup Vercel</li>
-        <li>Setup dynamic pages</li>
-        <li>Move data to the store. Pass in data via props</li>
-        <li>Setup Tailwind CSS</li>
-        <li>CSS custom properties and a dark mode toggle</li>
-        <li>Gsap animations</li>
-        <li>Google fonts</li>
-      </ul>
+      <section class="card-container">
+        <Card
+          v-for="mountain in mountains"
+          :key="mountain.slug"
+          :image="mountain.image"
+          :title="mountain.title"
+          :continent="mountain.continent"
+        />
+      </section>
     </main>
     <Footer />
   </div>
@@ -49,3 +39,18 @@ export default {
   // }
 }
 </script>
+
+<style scoped>
+main {
+  padding: 2rem 1rem;
+}
+
+.card-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+</style>

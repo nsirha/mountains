@@ -9,6 +9,7 @@
           :image="mountain.image"
           :title="mountain.title"
           :continent="mountain.continent"
+          :slug="mountain.slug"
         />
       </section>
     </main>
@@ -43,6 +44,7 @@ export default {
 <style scoped>
 main {
   padding: 2rem 1rem;
+  background-color: var(--mainBg);
 }
 
 .card-container {

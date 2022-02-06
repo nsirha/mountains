@@ -7,12 +7,18 @@
   --toggleBg: var(--white);
   --toggleColor: var(--black);
   --headerBg: linear-gradient(90deg, purple, orange);
+  --mainBg: var(--white);
+  --cardBg: var(--white);
+  --cardTextColor: var(--black);
 }
 
 .dark {
   --toggleBg: var(--black);
   --toggleColor: var(--white);
   --headerBg: linear-gradient(90deg, var(--black), #292b43);
+  --mainBg: #292b43;
+  --cardBg: #61658e;
+  --cardTextColor: var(--white);
 }
 
 body {

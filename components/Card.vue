@@ -1,10 +1,12 @@
 <template>
   <div class="card shadow-xl">
-    <img :src="image" :alt="title" width="250" height="125" loading="lazy" />
-    <div class="card-content bg-white p-2.5">
-      <h3 class="title">{{ title }}</h3>
-      <p class="continent text-gray-400 text-xs">{{ continent }}</p>
-    </div>
+    <nuxt-link :to="slug">
+      <img :src="image" :alt="title" width="250" height="125" loading="lazy" />
+      <div class="card-content p-2.5">
+        <h3 class="title">{{ title }}</h3>
+        <p class="continent text-gray-400 text-xs">{{ continent }}</p>
+      </div>
+    </nuxt-link>
   </div>
 </template>
 
@@ -22,6 +24,10 @@ export default {
     image: {
       type: String,
       default: null
+    },
+    slug: {
+      type: String,
+      default: null
     }
   }
 }
@@ -37,6 +43,11 @@ export default {
 .card-content {
   border-bottom-left-radius: var(--borderRadius);
   border-bottom-right-radius: var(--borderRadius);
+  background-color: var(--cardBg);
+}
+
+.title {
+  color: var(--cardTextColor);
 }
 
 img {
@@ -46,5 +57,10 @@ img {
   object-fit: cover;
   border-top-left-radius: var(--borderRadius);
   border-top-right-radius: var(--borderRadius);
+}
+
+a:hover .title,
+a:focus .title {
+  text-decoration: underline;
 }
 </style>

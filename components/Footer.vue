@@ -6,6 +6,6 @@
 
 <style scoped>
 footer {
-  background-image: linear-gradient(90deg, crimson, purple);
+  background-image: var(--headerBg);
 }
 </style>

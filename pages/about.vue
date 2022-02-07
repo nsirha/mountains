@@ -11,9 +11,9 @@
         <li>✅ Google fonts</li>
         <li>✅ CSS custom properties and a dark mode toggle</li>
         <li>✅ Another page in the navigation</li>
+        <li>✅ Setup dynamic pages</li>
         <li>Swiper JS</li>
         <li>Setup Vercel</li>
-        <li>Setup dynamic pages</li>
         <li>Move data to the store. Pass in data via props</li>
         <li>Gsap animations</li>
       </ul>

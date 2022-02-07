@@ -10,6 +10,7 @@
   --mainBg: var(--white);
   --cardBg: var(--white);
   --cardTextColor: var(--black);
+  --textColor: var(--black);
 }
 
 .dark {
@@ -19,8 +20,20 @@
   --mainBg: #292b43;
   --cardBg: #61658e;
   --cardTextColor: var(--white);
+  --textColor: var(--white);
 }
 
 body {
   font-family: 'Poppins', sans-serif;
+}
+
+main {
+  background-color: var(--mainBg);
+}
+
+h1,
+h2,
+p,
+ul {
+  color: var(--textColor);
 }

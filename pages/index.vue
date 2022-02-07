@@ -1,8 +1,8 @@
 <template>
   <div>
     <Header />
-    <main>
-      <section class="card-container">
+    <main class="py-8 px-4">
+      <section class="card-container max-w-6xl mx-auto grid place-items-center gap-4">
         <Card
           v-for="mountain in mountains"
           :key="mountain.slug"
@@ -42,17 +42,7 @@ export default {
 </script>
 
 <style scoped>
-main {
-  padding: 2rem 1rem;
-  background-color: var(--mainBg);
-}
-
 .card-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: grid;
-  place-items: center;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1rem;
 }
 </style>

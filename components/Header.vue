@@ -3,7 +3,7 @@
 		<nuxt-link to="/"><h1 class="text-white font-bold uppercase text-xl">{{ title }}.</h1></nuxt-link>
 		<nav class="flex text-white">
 			<nuxt-link to="/about">About</nuxt-link>
-			<nuxt-link to="/contact">Contact</nuxt-link>
+			<nuxt-link to="/carousel">Carousel</nuxt-link>
 		</nav>
 		<button class="theme-toggle rounded-3xl" @click="toggleTheme">
 			{{themeDark ? 'Dark' : 'Light'}}
